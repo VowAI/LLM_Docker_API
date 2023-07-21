@@ -16,6 +16,7 @@ FROM env_base AS app_base
 ### DEVELOPERS/ADVANCED USERS ###
 # Clone oobabooga/text-generation-webui
 RUN git clone https://github.com/oobabooga/text-generation-webui /src
+RUN git clone https://huggingface.co/TheBloke/Llama-2-13B-GPTQ /config/models
 # To use local source: comment out the git clone command then set the build arg `LCL_SRC_DIR`
 #ARG LCL_SRC_DIR="text-generation-webui"
 #COPY ${LCL_SRC_DIR} /src
